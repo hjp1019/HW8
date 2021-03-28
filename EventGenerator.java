@@ -19,14 +19,13 @@ public class EventGenerator {
 			Event currEvent = generateEvent(i, ThreadLocalRandom.current().nextInt());
 			System.out.println("Current event sequence number: " + currEvent.getEventSeqnum());
 			System.out.println("Current event data value: " + currEvent.getEventDataValue());
-			pub.notifySubscribers(currEvent);
-			if (currEvent.getEventSeqnum() != 0 && currEvent.getEventSeqnum() % 40 == 0) {
+			if (currEvent.getEventSeqnum() != 0 && (currEvent.getEventSeqnum()+1) % 40 == 0) {
 				for (SubscriberInterface s : this.myList) {
-					if (!(pub.getSubscribers().contains(s))) {
-						pub.registerSubscriber(s);
-					}
+					pub.registerSubscriber(s);
+					pub.resetSubscriberThresholds();
 				}
 			}
+			pub.notifySubscribers(currEvent);
 		}
 	}
 	

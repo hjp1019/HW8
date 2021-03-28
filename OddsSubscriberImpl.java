@@ -9,6 +9,14 @@ public class OddsSubscriberImpl implements SubscriberInterface {
 		this.threshold = threshold;
 	}
 	
+	public int getEventsReceived() {
+		return this.eventsReceived;
+	}
+	
+	public void setEventsReceived(int num) {
+		this.eventsReceived = num;
+	}
+	
 	// UML says void but interface is boolean return type
 	public boolean notifySubscriber(Event e) {
 		

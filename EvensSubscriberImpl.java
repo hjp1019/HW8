@@ -9,6 +9,14 @@ public class EvensSubscriberImpl implements SubscriberInterface {
 		this.threshold = threshold;
 	}
 	
+	public int getEventsReceived() {
+		return this.eventsReceived;
+	}
+	
+	public void setEventsReceived(int num) {
+		this.eventsReceived = num;
+	}
+	
 	// UML diagram says void here but in interface boolean
 	public boolean notifySubscriber(Event e) {
 		
@@ -17,7 +25,7 @@ public class EvensSubscriberImpl implements SubscriberInterface {
 			if (eventsReceived <= threshold) {
 				System.out.println("SubscriberEvens: Event is even: " + e.getEventDataValue());
 			}
-			if (eventsReceived == threshold) {
+			if (eventsReceived >= threshold) {
 				return false;
 			}
 		}

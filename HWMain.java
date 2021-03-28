@@ -4,9 +4,9 @@ public class HWMain {
 
 	public static void main(String[] args) {
 		PublisherImpl pub = new PublisherImpl();
-		OddsSubscriberImpl odds = new OddsSubscriberImpl(21);
-		EvensSubscriberImpl evens = new EvensSubscriberImpl(14);
-		ThreesSubscriberImpl threes = new ThreesSubscriberImpl(10);
+		OddsSubscriberImpl odds = new OddsSubscriberImpl(1);
+		EvensSubscriberImpl evens = new EvensSubscriberImpl(1);
+		ThreesSubscriberImpl threes = new ThreesSubscriberImpl(1);
 		pub.registerSubscriber(odds);
 		pub.registerSubscriber(evens);
 		pub.registerSubscriber(threes);

@@ -1,20 +1,20 @@
 package hw8;
 
 public class Event {
-	private int EventSequenceNumber;
-	private int EventDataValue;
+	private int eventSequenceNumber;
+	private int eventDataValue;
 	
 	// constructor
 	public Event(int seqNum, int data) {
-		this.EventSequenceNumber = seqNum;
-		this.EventDataValue = data;
+		this.eventSequenceNumber = seqNum;
+		this.eventDataValue = data;
 	}
 	
 	public int getEventSeqnum() {
-		return EventSequenceNumber;
+		return eventSequenceNumber;
 	}
 	
 	public int getEventDataValue() {
-		return EventDataValue;
+		return eventDataValue;
 	}
 }
