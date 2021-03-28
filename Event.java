@@ -6,14 +6,15 @@ public class Event {
 	
 	// constructor
 	public Event(int seqNum, int data) {
-		
+		this.EventSequenceNumber = seqNum;
+		this.EventDataValue = data;
 	}
 	
 	public int getEventSeqnum() {
-		return 0;
+		return EventSequenceNumber;
 	}
 	
 	public int getEventDataValue() {
-		return 0;
+		return EventDataValue;
 	}
 }
